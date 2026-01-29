@@ -1,0 +1,71 @@
+-----------------------------------------------------------
+				Day 2 (Conditional Statements: If-Else)
+function getGrade(score) {
+    let grade;
+    // Write your code here
+    if(score>25&&score<=30){grade= 'A'}
+    else if(score>20&&score<=25){grade='B'}
+    else if(score>15&&score<=20){grade= 'C'}
+    else if(score>10&&score<=15){grade= 'D'}
+    else if(score>5&&score<=10){grade= 'E'}
+    else{ grade= 'F'}
+    return grade;
+}
+
+
+function main() {
+    const score = +(readLine());
+    
+    console.log(getGrade(score));
+}
+-----------------------------------------------------------
+				Day 2 (Conditional Statements: Switch)
+
+function getLetter(s) {
+  let letter;
+  const first = s.charAt(0);
+
+  const groupA = ['a', 'e', 'i', 'o', 'u'];
+  const groupB = ['b', 'c', 'd', 'f', 'g'];
+  const groupC = ['h', 'j', 'k', 'l', 'm'];
+  const groupD = ['n','p','q','r','s','t','v','w','x','y','z'];
+
+  switch (true) { 
+    case groupA.includes(first):
+      letter = 'A';
+      break;
+    case groupB.includes(first):
+      letter = 'B';
+      break;
+    case groupC.includes(first):
+      letter = 'C';
+      break;
+    case groupD.includes(first):
+      letter = 'D';
+      break;
+  }
+
+  return letter;
+}
+
+-----------------------------------------------------------
+				Day 2 (Loops)
+
+function vowelsAndConsonants(s) {
+  const vowels = ['a', 'e', 'i', 'o', 'u'];
+
+  // Print vowels first
+  for (let i = 0; i < s.length; i++) {
+    if (vowels.includes(s[i])) {
+      console.log(s[i]);
+    }
+  }
+
+  // Print consonants next
+  for (let i = 0; i < s.length; i++) {
+    if (!vowels.includes(s[i])) {
+      console.log(s[i]);
+    }
+  }
+}
+

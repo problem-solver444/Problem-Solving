@@ -1,0 +1,59 @@
+----------------------------------------------------------
+				Day 1 (Arthimetic Operator)
+
+ 
+function getArea(length, width) {
+    let area;
+    // Write your code here
+    area=length*width
+    return area;
+}
+
+
+
+function getPerimeter(length, width) {
+    let perimeter;
+    // Write your code here
+    perimeter=(length+width)*2
+    return perimeter;
+}
+----------------------------------------------------------
+				Day 1 (Functions)
+
+function factorial(n){
+    let multi=1;
+    for(let i=n;i>0;i--){
+        multi*=i;
+    }
+    return multi;
+}
+
+
+function main() {
+    const n = +(readLine());
+    
+    console.log(factorial(n));
+}
+-----------------------------------------------------------
+				Day 1 (let and const)
+
+function main() {
+    // Write your code here. Read input using 'readLine()' and print output using 'console.log()'.
+    const PI = Math.PI;
+    let r = +(readLine());
+    
+    // Print the area of the circle:
+    let area=PI *  r*r;
+    console.log(area);
+    // Print the perimeter of the circle:
+    let perimeter=2*PI*r
+    console.log(perimeter)
+    try {  // Attempt to redefine the value of constant variable PI
+        PI = 0;
+        // Attempt to print the value of PI
+        console.log(PI);
+    } catch(error) {
+        console.error("You correctly declared 'PI' as a constant.");
+    }
+}
+-----------------------------------------------------------
